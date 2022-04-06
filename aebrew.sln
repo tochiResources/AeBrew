@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "scripts", "scripts\scripts.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "brewlib", "brewlib\brewlib.csproj", "{A4F7CC21-B769-424B-AB59-89E93D781762}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aebrew", "bridge\aebrew.csproj", "{B617255F-72B1-404F-AB0F-2824F69BAD6D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aebrew", "aebrew\aebrew.csproj", "{B617255F-72B1-404F-AB0F-2824F69BAD6D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
