@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B617255F-72B1-404F-AB0F-2824F69BAD6D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>bridge</RootNamespace>
+    <AssemblyName>bridge</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OpenTK">
+      <HintPath>..\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tiny">
+      <HintPath>..\Tiny.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AeBrewCommon\Curves\BaseCurve.cs" />
+    <Compile Include="AeBrewCommon\Curves\BezierCurve.cs" />
+    <Compile Include="AeBrewCommon\Curves\CatmullCurve.cs" />
+    <Compile Include="AeBrewCommon\Curves\CircleCurve.cs" />
+    <Compile Include="AeBrewCommon\Curves\CompositeCurve.cs" />
+    <Compile Include="AeBrewCommon\Curves\Curve.cs" />
+    <Compile Include="AeBrewCommon\Curves\TransformedCurve.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding3d\Camera.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding3d\CameraState.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding3d\HasOsbSprite.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding3d\Line3d.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding3d\Line3dEx.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding3d\Node3d.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding3d\Object3d.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding3d\Object3dState.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding3d\PerspectiveCamera.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding3d\Scene3d.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding3d\Sprite3d.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding3d\Triangle3d.cs" />
+    <Compile Include="AeBrewEditor\Builder.cs" />
+    <Compile Include="AeBrewEditor\Editor.cs" />
+    <Compile Include="AeBrewEditor\Mapset\BeatmapLoadingException.cs" />
+    <Compile Include="AeBrewEditor\Mapset\EditorBeatmap.cs" />
+    <Compile Include="AeBrewEditor\Mapset\MapsetManager.cs" />
+    <Compile Include="AeBrewEditor\Processes\ProcessWorker.cs" />
+    <Compile Include="AeBrewEditor\Processes\RemoteProcessWorker.cs" />
+    <Compile Include="AeBrewEditor\Processes\RemoteProcessWorkerContainer.cs" />
+    <Compile Include="AeBrewEditor\Program.cs" />
+    <Compile Include="AeBrewEditor\ScreenLayers\NewProjectMenu.cs" />
+    <Compile Include="AeBrewEditor\ScreenLayers\ProjectMenu.cs" />
+    <Compile Include="AeBrewEditor\ScreenLayers\ReferencedAssemblyConfig.cs" />
+    <Compile Include="AeBrewEditor\ScreenLayers\ScreenLayerManagerExtensions.cs" />
+    <Compile Include="AeBrewEditor\ScreenLayers\StartMenu.cs" />
+    <Compile Include="AeBrewEditor\ScreenLayers\UiScreenLayer.cs" />
+    <Compile Include="AeBrewEditor\ScreenLayers\UpdateMenu.cs" />
+    <Compile Include="AeBrewEditor\ScreenLayers\Util\ContextMenu.cs" />
+    <Compile Include="AeBrewEditor\ScreenLayers\Util\LoadingScreen.cs" />
+    <Compile Include="AeBrewEditor\ScreenLayers\Util\MessageBox.cs" />
+    <Compile Include="AeBrewEditor\ScreenLayers\Util\PromptBox.cs" />
+    <Compile Include="AeBrewEditor\Scripting\ScriptCompilationException.cs" />
+    <Compile Include="AeBrewEditor\Scripting\ScriptCompiler.cs" />
+    <Compile Include="AeBrewEditor\Scripting\ScriptContainer.cs" />
+    <Compile Include="AeBrewEditor\Scripting\ScriptContainerAppDomain.cs" />
+    <Compile Include="AeBrewEditor\Scripting\ScriptContainerBase.cs" />
+    <Compile Include="AeBrewEditor\Scripting\ScriptContainerProcess.cs" />
+    <Compile Include="AeBrewEditor\Scripting\ScriptLoadingException.cs" />
+    <Compile Include="AeBrewEditor\Scripting\ScriptManager.cs" />
+    <Compile Include="AeBrewEditor\Scripting\ScriptProvider.cs" />
+    <Compile Include="AeBrewEditor\Settings.cs" />
+    <Compile Include="AeBrewEditor\Storyboarding\DisplayableObject.cs" />
+    <Compile Include="AeBrewEditor\Storyboarding\EditorGeneratorContext.cs" />
+    <Compile Include="AeBrewEditor\Storyboarding\EditorOsbAnimation.cs" />
+    <Compile Include="AeBrewEditor\Storyboarding\EditorOsbSample.cs" />
+    <Compile Include="AeBrewEditor\Storyboarding\EditorOsbSprite.cs" />
+    <Compile Include="AeBrewEditor\Storyboarding\EditorStoryboardLayer.cs" />
+    <Compile Include="AeBrewEditor\Storyboarding\Effect.cs" />
+    <Compile Include="AeBrewEditor\Storyboarding\EventObject.cs" />
+    <Compile Include="AeBrewEditor\Storyboarding\FrameStats.cs" />
+    <Compile Include="AeBrewEditor\Storyboarding\HasPostProcess.cs" />
+    <Compile Include="AeBrewEditor\Storyboarding\LayerManager.cs" />
+    <Compile Include="AeBrewEditor\Storyboarding\Project.cs" />
+    <Compile Include="AeBrewEditor\Storyboarding\ScriptedEffect.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AeBrewCommon\Animations\EasingFunctions.cs" />
+    <Compile Include="AeBrewCommon\Animations\InterpolatingFunctions.cs" />
+    <Compile Include="AeBrewCommon\Animations\Keyframe.cs" />
+    <Compile Include="AeBrewCommon\Animations\KeyframedValue.cs" />
+    <Compile Include="AeBrewCommon\Animations\KeyframedValueExtensions.cs" />
+    <Compile Include="AeBrewCommon\Mapset\Beatmap.cs" />
+    <Compile Include="AeBrewCommon\Mapset\BeatmapExtensions.cs" />
+    <Compile Include="AeBrewCommon\Mapset\ControlPoint.cs" />
+    <Compile Include="AeBrewCommon\Mapset\OsuBreak.cs" />
+    <Compile Include="AeBrewCommon\Mapset\OsuCircle.cs" />
+    <Compile Include="AeBrewCommon\Mapset\OsuHitObject.cs" />
+    <Compile Include="AeBrewCommon\Mapset\OsuHold.cs" />
+    <Compile Include="AeBrewCommon\Mapset\OsuSlider.cs" />
+    <Compile Include="AeBrewCommon\Mapset\OsuSpinner.cs" />
+    <Compile Include="AeBrewCommon\Scripting\Script.cs" />
+    <Compile Include="AeBrewCommon\Scripting\StoryboardObjectGenerator.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\Commands\ColorCommand.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\Commands\Command.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\Commands\CommandComparer.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\Commands\CommandGroup.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\Commands\FadeCommand.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\Commands\ICommand.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\Commands\IFragmentableCommand.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\Commands\IOffsetable.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\Commands\ITypedCommand.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\Commands\LoopCommand.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\Commands\MoveCommand.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\Commands\MoveXCommand.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\Commands\MoveYCommand.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\Commands\ParameterCommand.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\Commands\RotateCommand.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\Commands\ScaleCommand.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\Commands\TriggerCommand.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\Commands\VScaleCommand.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\CommandValues\CommandColor.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\CommandValues\CommandDecimal.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\CommandValues\CommandParameter.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\CommandValues\CommandPosition.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\CommandValues\CommandScale.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\CommandValues\CommandValue.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\ConfigurableAttribute.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\Display\AnimatedValue.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\Display\AnimatedValueBuilder.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\Display\CompositeCommand.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\Display\IAnimatedValueBuilder.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\Display\LoopDecorator.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\Display\TriggerDecorator.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\EffectConfig.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\ExportSettings.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\GeneratorContext.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\OsbAnimation.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\OsbAnimationWriter.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\OsbSample.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\OsbSprite.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\OsbSpriteWriter.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\OsbWriterFactory.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\StoryboardLayer.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\StoryboardObject.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\Util\CommandGenerator.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\Util\OsbAnimationPool.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\Util\OsbSpritePool.cs" />
+    <Compile Include="AeBrewCommon\Storyboarding\Util\OsbSpritePools.cs" />
+    <Compile Include="AeBrewCommon\Subtitles\FontEffect.cs" />
+    <Compile Include="AeBrewCommon\Subtitles\FontGenerator.cs" />
+    <Compile Include="AeBrewCommon\Subtitles\FontGlow.cs" />
+    <Compile Include="AeBrewCommon\Subtitles\FontGradient.cs" />
+    <Compile Include="AeBrewCommon\Subtitles\FontOutline.cs" />
+    <Compile Include="AeBrewCommon\Subtitles\FontShadow.cs" />
+    <Compile Include="AeBrewCommon\Subtitles\Parsers\AssParser.cs" />
+    <Compile Include="AeBrewCommon\Subtitles\Parsers\SbvParser.cs" />
+    <Compile Include="AeBrewCommon\Subtitles\Parsers\SrtParser.cs" />
+    <Compile Include="AeBrewCommon\Subtitles\SubtitleLine.cs" />
+    <Compile Include="AeBrewCommon\Subtitles\SubtitleSet.cs" />
+    <Compile Include="AeBrewCommon\Util\BitmapHelper.cs" />
+    <Compile Include="AeBrewCommon\Util\Box2Extensions.cs" />
+    <Compile Include="AeBrewCommon\Util\Misc.cs" />
+    <Compile Include="AeBrewCommon\Util\NamedValue.cs" />
+    <Compile Include="AeBrewCommon\Util\ObjectSerializer.cs" />
+    <Compile Include="AeBrewCommon\Util\OrientedBoundingBox.cs" />
+    <Compile Include="AeBrewCommon\Util\Pool.cs" />
+    <Compile Include="AeBrewCommon\Util\StreamReaderExtensions.cs" />
+    <Compile Include="AeBrewCommon\Util\VectorHelper.cs" />
+    <Compile Include="AeBrewEditor\Updater.cs" />
+    <Compile Include="AeBrewEditor\UserInterface\Components\EffectConfigUi.cs" />
+    <Compile Include="AeBrewEditor\UserInterface\Components\EffectList.cs" />
+    <Compile Include="AeBrewEditor\UserInterface\Components\LayerList.cs" />
+    <Compile Include="AeBrewEditor\UserInterface\Components\SettingsMenu.cs" />
+    <Compile Include="AeBrewEditor\UserInterface\Drawables\StoryboardDrawable.cs" />
+    <Compile Include="AeBrewEditor\UserInterface\HsbColorPicker.cs" />
+    <Compile Include="AeBrewEditor\UserInterface\PathSelector.cs" />
+    <Compile Include="AeBrewEditor\UserInterface\Selectbox.cs" />
+    <Compile Include="AeBrewEditor\UserInterface\Skinning\Styles\ColorPickerStyle.cs" />
+    <Compile Include="AeBrewEditor\UserInterface\Skinning\Styles\PathSelectorStyle.cs" />
+    <Compile Include="AeBrewEditor\UserInterface\Skinning\Styles\SelectboxStyle.cs" />
+    <Compile Include="AeBrewEditor\UserInterface\TimelineSlider.cs" />
+    <Compile Include="AeBrewEditor\UserInterface\Vector2Picker.cs" />
+    <Compile Include="AeBrewEditor\UserInterface\Vector3Picker.cs" />
+    <Compile Include="AeBrewEditor\Util\AsyncActionQueue.cs" />
+    <Compile Include="AeBrewEditor\Util\MultiFileWatcher.cs" />
+    <Compile Include="AeBrewEditor\Util\NetHelper.cs" />
+    <Compile Include="AeBrewEditor\Util\OsuHelper.cs" />
+    <Compile Include="AeBrewEditor\Util\ThrottledActionScheduler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\brewlib\brewlib.csproj">
+      <Project>{a4f7cc21-b769-424b-ab59-89e93d781762}</Project>
+      <Name>brewlib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AeBrewEditor\App.config" />
+    <None Include="AeBrewEditor\OpenTK.dll.config" />
+    <None Include="AeBrewEditor\packages.config" />
+    <EmbeddedResource Include="AeBrewEditor\Resources\FontAwesome.ttf" />
+    <EmbeddedResource Include="AeBrewEditor\Resources\project\scripts.csproj">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AeBrewEditor\Resources\Roboto-Light.ttf" />
+    <EmbeddedResource Include="AeBrewEditor\Resources\Roboto-Regular.ttf" />
+    <EmbeddedResource Include="AeBrewEditor\Resources\scripttemplate.csx" />
+    <EmbeddedResource Include="AeBrewEditor\Resources\skin.json" />
+    <EmbeddedResource Include="AeBrewEditor\Resources\skin_constants.json" />
+    <EmbeddedResource Include="AeBrewEditor\Resources\skin_drawables.json" />
+    <EmbeddedResource Include="AeBrewEditor\Resources\skin_drawables_debug.json" />
+    <EmbeddedResource Include="AeBrewEditor\Resources\skin_styles.json" />
+    <EmbeddedResource Include="AeBrewEditor\Resources\ui-line-opt.json" />
+    <EmbeddedResource Include="AeBrewEditor\Resources\ui-rounded-borders-opt.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AeBrewEditor\Resources\project\storyboard.sln" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AeBrewEditor\Resources\ui-line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AeBrewEditor\Resources\ui-rounded-borders.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AeBrewEditor\icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
